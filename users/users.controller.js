@@ -3,8 +3,8 @@ import * as usersModel from "./users.model.js";
 export async function getUsers(req, res) {
   const username = req.query.username;
   const users = username
-    ? await usersModel.getUsersByUsername(username)
-    : await usersModel.getUsers();
+    ? await usersModel.getUsersByUsername(username) //if condition is met, execute
+    : await usersModel.getUsers(); //if not met, execute after colon. If else statement
 
   res.json({
     success: true,
