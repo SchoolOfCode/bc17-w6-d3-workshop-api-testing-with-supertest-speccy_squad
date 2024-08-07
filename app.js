@@ -1,6 +1,7 @@
 import express from "express";
 import logger from "morgan";
 import usersRouter from "./users/users.router.js";
+import { resetUsersTable } from "db/helpers.js"
 
 const app = express();
 
