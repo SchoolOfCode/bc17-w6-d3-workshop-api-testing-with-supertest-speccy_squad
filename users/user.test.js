@@ -24,5 +24,7 @@ it("Respond with JSON to GET request /api/health", async function () {
   const response = await request(app).get("/api/health");
   expect(response.headers["content-type"]).toMatch(/json/);
   expect(response.status).toEqual(200);
+  expect(response.body).toEqual({ success: true, payload: "API is running correctly" });
   console.log(response.body);
 });
+
