@@ -1,6 +1,7 @@
 import { test, it, expect } from "vitest";
 import request from "supertest";
 import app from "../app.js";
+import { resetUsersTable } from "db/helpers.js"
 
 //bare bones test
 test("GET /api/health works", () => {});
